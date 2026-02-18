@@ -2,10 +2,10 @@ from ursina import *
 
 from icecream import ic
 
-from classes.create_objects import my_wather_area, my_grid_overlay,my_lower_grid, my_coordinates, enemy_wather_area, enemy_grid_overlay, enemy_lower_grid, enemy_coordinates, nav_button
+from classes.create_objects import my_water_area, my_grid_overlay,my_lower_grid, my_coordinates, enemy_water_area, enemy_grid_overlay, enemy_lower_grid, enemy_coordinates, nav_button
 
-scene1_coordinates=my_wather_area.position
-scene2_coordinates=enemy_wather_area.position
+scene1_coordinates=my_water_area.position
+scene2_coordinates=enemy_water_area.position
 
 
 if __name__ == "__main__":
@@ -15,10 +15,15 @@ if __name__ == "__main__":
 
 
     ambient_lights = AmbientLight(color=color.white)
-    EditorCamera()
+    # EditorCamera()
+    # camera.parent = my_water_area
+    # camera.rotation = Vec3(35, 0, 0)
+    # camera.position = Vec3(0, 15, 0)
+    # camera.fov = 60
+    
+    camera.position = Vec3(0, 15, -22)
     camera.rotation = Vec3(35, 0, 0)
-    camera.position = Vec3(0, 15, 0)
-    camera.fov = 60
+    # camera.fov = 60
 
     def update():
         if nav_button.enemy_position:

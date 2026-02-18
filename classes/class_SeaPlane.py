@@ -19,6 +19,7 @@ class SeaPlane(Entity):
         shader = lit_with_shadows_shader,
         position=position,
         rotation=rotation,
+        collider='box',
         )
 
         self.position = position

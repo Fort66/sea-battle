@@ -41,4 +41,4 @@ class GridOverlay(Entity):
                 cell_z = start_position + (row * (self.grid_scale / self.grid_width)) + offset + .2
 
                 self.map_position_cells[(col, row)] = Vec3(cell_x, 0, cell_z) + self.position
-
+        # ic(self.map_position_cells)

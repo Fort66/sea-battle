@@ -19,7 +19,7 @@ class CoordinatesText:
             ),
             scale=20,
             rotation=Vec3(90, 0, 0),
-        ).position = self.grid.map_position_cells[cell]
+        ).position = self.grid.map_position_cells[cell][0]
 
     def set_coordinates(self):
         for i in range(1, 11):

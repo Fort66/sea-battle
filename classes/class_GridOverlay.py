@@ -1,6 +1,7 @@
 from ursina import Entity, color, Vec3, Grid
 
 from icecream import ic
+from collections import defaultdict
 
 
 class GridOverlay(Entity):
@@ -28,6 +29,7 @@ class GridOverlay(Entity):
         self.grid_height = height
         self.grid_scale = width
         self.map_position_cells = {}
+        # self.map_position_cells = defaultdict(defaultdict)
         self.get_map_position_cells()
 
     def get_map_position_cells(self):
@@ -40,5 +42,5 @@ class GridOverlay(Entity):
                 cell_x = start_position + (col * (self.grid_scale / self.grid_width)) + offset - .2
                 cell_z = start_position + (row * (self.grid_scale / self.grid_width)) + offset + .2
 
-                self.map_position_cells[(col, row)] = Vec3(cell_x, 0, cell_z) + self.position
-        # ic(self.map_position_cells)
+                self.map_position_cells[(col, row)] = [(Vec3(cell_x, 0, cell_z) + self.position), []]
+        # ic(list(self.map_position_cells[(0, 0)].keys())[0])

@@ -2,7 +2,7 @@ from ursina import *
 
 app = Ursina()
 
-camera.position = (0, 70, 0)
+camera.position = (0, 60, 0)
 camera.rotation = (90, 0, 0)
 
 

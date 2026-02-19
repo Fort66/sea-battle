@@ -42,11 +42,12 @@ class ShipsMenu(Entity):
                 self.ship_counter -= 1
                 ships_creater.count_deck = self.deck_amount
                 ships_creater.create_ship_command = True
-                ships_creater.model = self.model
+                ships_creater.model = self.model.name
                 ships_creater.texture = self.texture
+                ships_creater.water = self.water
 
-                if self.ship_counter <= 0:
-                    self.visible = False
+        if self.ship_counter <= 0:
+            self.visible = False
 
 
 

@@ -10,7 +10,7 @@ from .class_ShipsMenu import ShipsMenu
 
 my_water_area = SeaPlane()
 my_grid_overlay = GridOverlay(10, 10, position=Vec3(0, .002, 0))
-my_lower_grid = GridOverlay(12, 12, color=color.rgba(0, 0, 0, .1), position=Vec3(0, -.002, 0))
+my_lower_grid = GridOverlay(12, 12, color=color.rgba(0, 0, 0, 0), position=Vec3(0, -.002, 0))
 
 my_coordinates = CoordinatesText(my_lower_grid)
 
@@ -18,7 +18,7 @@ my_coordinates = CoordinatesText(my_lower_grid)
 
 enemy_water_area = SeaPlane(position=Vec3(-18, 0, 0))
 enemy_grid_overlay = GridOverlay(10, 10, position=Vec3(-18, .002, 0))
-enemy_lower_grid = GridOverlay(12, 12, color=color.rgba(0, 0, 0, .1), position=Vec3(-18, -.002, 0))
+enemy_lower_grid = GridOverlay(12, 12, color=color.rgba(0, 0, 0, 0), position=Vec3(-18, -.002, 0))
 
 enemy_coordinates = CoordinatesText(enemy_lower_grid)
 
